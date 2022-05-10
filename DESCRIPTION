@@ -1,0 +1,16 @@
+Package: ionet
+Type: Package
+Title: Network Analysis for Input-Output Tables
+Version: 0.1.0
+Author: Shiying Xiao
+Maintainer: Shiying Xiao <shiying.xiao@outlook.com>
+Description: Network functionalities specialized for data generated from input-output tables.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 1.0.8.3)
+LinkingTo: Rcpp
+RoxygenNote: 7.1.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
