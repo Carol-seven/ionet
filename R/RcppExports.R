@@ -4,10 +4,10 @@
 #' Find the node with minimum distance which is not yet included in doneSet
 NULL
 
-#' Implement Dijkstra's algorithm
+#' Dijkstra's algorithm
 #'
-#' @param adjmat is the adjacency matrix of an directed and weighted network.
-#' @param src is the given source node to find the shortest distance.
+#' @param adjmat The adjacency matrix of an directed and weighted network.
+#' @param src The given source node to find the shortest distance.
 #' @return Lists of distance, previous node.
 dijkstra <- function(adjmat, src) {
     .Call(`_ionet_dijkstra`, adjmat, src)

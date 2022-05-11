@@ -24,10 +24,10 @@ int minDist(NumericVector dist, LogicalVector doneSet) {
 }
 
 
-//' Implement Dijkstra's algorithm
+//' Dijkstra's algorithm
 //'
-//' @param adjmat is the adjacency matrix of an directed and weighted network.
-//' @param src is the given source node to find the shortest distance.
+//' @param adjmat The adjacency matrix of an directed and weighted network.
+//' @param src The given source node to find the shortest distance.
 //' @return Lists of distance, previous node.
 // [[Rcpp::export]]
 List dijkstra(NumericMatrix adjmat, int src) {

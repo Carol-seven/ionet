@@ -2,18 +2,18 @@
 % Please edit documentation in R/RcppExports.R
 \name{dijkstra}
 \alias{dijkstra}
-\title{Implement Dijkstra's algorithm}
+\title{Dijkstra's algorithm}
 \usage{
 dijkstra(adjmat, src)
 }
 \arguments{
-\item{adjmat}{is the adjacency matrix of an directed and weighted network.}
+\item{adjmat}{The adjacency matrix of an directed and weighted network.}
 
-\item{src}{is the given source node to find the shortest distance.}
+\item{src}{The given source node to find the shortest distance.}
 }
 \value{
 Lists of distance, previous node.
 }
 \description{
-Implement Dijkstra's algorithm
+Dijkstra's algorithm
 }
