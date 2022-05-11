@@ -13,20 +13,19 @@ btw(
 )
 }
 \arguments{
-\item{adjmat}{is a square matrix of intermediate transactions in the input-output table.}
+\item{adjmat}{The square matrix of intermediate transactions in the input-output table.}
 
-\item{gross}{is the total input/output vector.}
+\item{gross}{The total input/output vector.}
 
-\item{prior}{is the vector containing node-specific prior information.}
+\item{prior}{The vector containing node-specific prior information.}
 
-\item{alpha}{is the tuning parameter controlling the weights for SP strength and
-prior information.}
+\item{alpha}{The tuning parameter controlling the weights for SP strength and prior information.}
 
-\item{type}{which type of SP to calculate: "consumption" or "distribution".}
+\item{type}{Which type of SP to calculate: "consumption" or "distribution".}
 }
 \value{
-a list of the betweeness centrality (vector), associated SP (matrix recording
-the intermediate vertices) and SP strength (matrix) for all vertices.
+Lists of the betweeness centrality, associated SPs, SP strength
+and the output based on SP for all vertices.
 }
 \description{
 Compute the betweenness centrality with priors based on strongest path.

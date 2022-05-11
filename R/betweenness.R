@@ -2,15 +2,14 @@
 #'
 #' Compute the betweenness centrality with priors based on strongest path.
 #'
-#' @param adjmat is a square matrix of intermediate transactions in the input-output table.
-#' @param gross is the total input/output vector.
-#' @param prior is the vector containing node-specific prior information.
-#' @param alpha is the tuning parameter controlling the weights for SP strength and
-#' prior information.
-#' @param type which type of SP to calculate: "consumption" or "distribution".
+#' @param adjmat The square matrix of intermediate transactions in the input-output table.
+#' @param gross The total input/output vector.
+#' @param prior The vector containing node-specific prior information.
+#' @param alpha The tuning parameter controlling the weights for SP strength and prior information.
+#' @param type Which type of SP to calculate: "consumption" or "distribution".
 #'
-#' @return a list of the betweeness centrality (vector), associated SP (matrix recording
-#' the intermediate vertices) and SP strength (matrix) for all vertices.
+#' @return Lists of the betweeness centrality, associated SPs, SP strength
+#' and the output based on SP for all vertices.
 #' @export
 
 
@@ -90,12 +89,11 @@ btw <- function(adjmat,
     }
   }
 
-  SP <- matrix(lapply(allpath, function(x) {x[-c(1, length(x))]}), n, n, byrow = TRUE)
-  strength <- matrix(distance, n, n, byrow = TRUE)
   if (type == "consumption") {
-    str.gross <- t(t(strength) * gross)
+    str.gross <- distance * rep(gross, times = n)
   } else if (type == "distribution") {
-    str.gross <- strength * gross
+    str.gross <- distance * rep(gross, each = n)
   }
-  return(list(btw = btw, path = SP, str = strength, str.gross = str.gross))
+
+  return(list(btw = btw, path = allpath, strength = distance, str.gross = str.gross))
 }
