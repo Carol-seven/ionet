@@ -137,3 +137,16 @@
 #' @format A data frame with 91 rows and 53 columns.
 #' @source \href{https://data.stats.gov.cn/ifnormal.htm?u=/files/html/quickSearch/trcc/trcc01.html&h=740}{National Bureau of Statistics of China}
 "china_2020_42"
+
+
+#' @name china_employment
+#' @docType data
+#' @title Sectoral employment data for China, 1990-2018
+#' @description Number of employed persons (in the unit of 10 thousands) in China 1990-2018, by sector.
+#' @usage data(china_employment)
+#' @format A data frame with 115 rows and 32 columns.
+#' @references Wang, Y., Jia, X. and Wang, C. (2021).
+#' ``Research on Sectoral Employment Accounting of China.''
+#' \emph{Statistical Research}, 38(12), 3-18.
+#' \href{https://tjyj.stats.gov.cn/EN/Y2021/V38/I12/3}{URL}
+"china_employment"
