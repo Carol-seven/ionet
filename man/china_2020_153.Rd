@@ -5,7 +5,7 @@
 \alias{china_2020_153}
 \title{Input-output table for China, 2020, 153 sectors}
 \format{
-A data frame with 160 rows and 168 columns.
+A data frame with 160 rows and 169 columns.
 }
 \source{
 \href{https://data.stats.gov.cn/ifnormal.htm?u=/files/html/quickSearch/trcc/trcc01.html&h=740}{National Bureau of Statistics of China}

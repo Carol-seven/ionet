@@ -5,7 +5,7 @@
 \alias{china_2002_122}
 \title{Input-output table for China, 2002, 122 sectors}
 \format{
-A data frame with 129 rows and 138 columns.
+A data frame with 129 rows and 139 columns.
 }
 \source{
 \href{https://data.stats.gov.cn/ifnormal.htm?u=/files/html/quickSearch/trcc/trcc01.html&h=740}{National Bureau of Statistics of China}
