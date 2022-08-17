@@ -31,6 +31,9 @@ int minDist(NumericVector dist, LogicalVector doneSet) {
 //' @return Lists of distance, previous node.
 // [[Rcpp::export]]
 List dijkstra(NumericMatrix adjmat, int src) {
+  if (adjmat.nrow() != adjmat.ncol()) {
+    stop("The intermediate flow matrix is not a square matrix!");
+  }
   int nnode = adjmat.ncol();
   if (src < 1 || src > nnode) stop("Inadmissible value for `src'");
   src = src - 1; // convert to indexing starting from zero
