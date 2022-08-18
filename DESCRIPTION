@@ -5,7 +5,7 @@ Version: 0.2.0
 Author: Shiying Xiao
 Maintainer: Shiying Xiao <shiying.xiao@outlook.com>
 Description: Network functionalities specialized for data generated from input-output tables.
-License: MIT + file LICENSE
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.8.3)
