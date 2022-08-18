@@ -14,7 +14,7 @@ using namespace Rcpp;
 //' @param alpha The tuning parameter controlling the weights for SP strength and
 //' prior information. The default setting is 1.
 //' @param type Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".
-//' @return Lists of betweeness score, associated SPs, and SP strength.
+//' @return Lists of betweeness score, associated SPs, SP distance and SP strength.
 // [[Rcpp::export]]
 List btw(NumericMatrix adjmat,
          NumericVector gross,
@@ -77,25 +77,31 @@ List btw(NumericMatrix adjmat,
     }
   }
 
+  NumericVector strength;
+  if (type == "consumption" || type == "pull") {
+    strength = distance * rep(gross, n);
+  } else if (type == "distribution" || type == "push") {
+    strength = distance * rep_each(gross, n);
+  }
+
   NumericVector btwscore(n);
   for (int j = 0; j < n*n; j++) {
     if (allpath[j] != R_NilValue) {
       IntegerVector path = allpath[j];
       int m = path.length();
-      int source = path[0] - 1;
-      int target = path[m-1] - 1;
       if (type == "consumption" || type == "pull") {
+        int source = path[0] - 1;
         for (int k = 1; k < m-1; k++) {
           int temp = path[k] - 1;
           btwscore[temp] = btwscore[temp] +
-            pow((gross[target]*distance[j]), alpha) * pow(prior[source], (1-alpha));
+            pow(strength[j], alpha) * pow(prior[source], 1-alpha);
         }
-      }
-      else if (type == "distribution" || type == "push") {
+      } else if (type == "distribution" || type == "push") {
+        int target = path[m-1] - 1;
         for (int k = 1; k < m-1; k++) {
           int temp = path[k];
           btwscore[temp] = btwscore[temp] +
-            pow((gross[source]*distance[j]), alpha) * pow(prior[target], (1-alpha));
+            pow(strength[j], alpha) * pow(prior[target], 1-alpha);
         }
       }
     }
@@ -103,6 +109,7 @@ List btw(NumericMatrix adjmat,
 
   return List::create(Named("btwscore") = btwscore,
                       // Named("prevnode") = prevnode + 1,
-                      Named("allpath") = allpath,
-                      Named("distance") = distance);
+                      Named("path") = allpath,
+                      Named("distance") = distance,
+                      Named("strength") = strength);
 }

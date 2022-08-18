@@ -20,7 +20,7 @@ prior information. The default setting is 1.}
 \item{type}{Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".}
 }
 \value{
-Lists of betweeness score, associated SPs, and SP strength.
+Lists of betweeness score, associated SPs, SP distance and SP strength.
 }
 \description{
 Compute the betweenness centrality with prior information based on strongest path (SP).

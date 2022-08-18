@@ -9,7 +9,7 @@ using namespace Rcpp;
  to allow different definitions of distance.
 */
 
-//' Find the node with minimum distance which is not yet included in doneSet
+// Find the node with minimum distance which is not yet included in doneSet
 int minDist(NumericVector dist, LogicalVector doneSet) {
   double min = R_PosInf;
   int nnode = dist.length(), index;
