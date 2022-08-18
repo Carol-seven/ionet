@@ -1,7 +1,7 @@
 Package: ionet
 Type: Package
 Title: Network Analysis for Input-Output Tables
-Version: 0.1.0
+Version: 0.2.0
 Author: Shiying Xiao
 Maintainer: Shiying Xiao <shiying.xiao@outlook.com>
 Description: Network functionalities specialized for data generated from input-output tables.
