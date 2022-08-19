@@ -15,6 +15,7 @@ using namespace Rcpp;
 //' prior information. The default setting is 1.
 //' @param type Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".
 //' @return Lists of betweeness score, associated SPs, SP distance and SP strength.
+//' @export
 // [[Rcpp::export]]
 List btw(NumericMatrix adjmat,
          NumericVector gross,

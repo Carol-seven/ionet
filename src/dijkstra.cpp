@@ -29,6 +29,7 @@ int minDist(NumericVector dist, LogicalVector doneSet) {
 //' @param adjmat The adjacency matrix of an directed and weighted network.
 //' @param src The given source node to find the shortest distance.
 //' @return Lists of distance, previous node.
+//' @export
 // [[Rcpp::export]]
 List dijkstra(NumericMatrix adjmat, int src) {
   if (adjmat.nrow() != adjmat.ncol()) {

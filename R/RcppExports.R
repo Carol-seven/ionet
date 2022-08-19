@@ -13,6 +13,7 @@
 #' prior information. The default setting is 1.
 #' @param type Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".
 #' @return Lists of betweeness score, associated SPs, SP distance and SP strength.
+#' @export
 btw <- function(adjmat, gross, prior, alpha = 1, type = "consumption") {
     .Call(`_ionet_btw`, adjmat, gross, prior, alpha, type)
 }
@@ -22,6 +23,7 @@ btw <- function(adjmat, gross, prior, alpha = 1, type = "consumption") {
 #' @param adjmat The adjacency matrix of an directed and weighted network.
 #' @param src The given source node to find the shortest distance.
 #' @return Lists of distance, previous node.
+#' @export
 dijkstra <- function(adjmat, src) {
     .Call(`_ionet_dijkstra`, adjmat, src)
 }
