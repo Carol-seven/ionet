@@ -38,20 +38,21 @@ List btw(NumericMatrix adjmat,
     stop("The tuning parameter alpha is not between 0 and 1!");
   }
 
+  NumericMatrix adj(n, n);
   if (type == "consumption" || type == "pull") {
     for (int i=0; i < n; i++) {
-      adjmat(_,i) = -log(adjmat(_,i) / gross[i]);
+      adj(_,i) = -log(adjmat(_,i) / gross[i]);
     }
   } else if (type == "distribution" || type == "push") {
     for (int i=0; i < n; i++) {
-      adjmat(i,_) = -log(adjmat(i,_) / gross[i]);
+      adj(i,_) = -log(adjmat(i,_) / gross[i]);
     }
   }
 
   NumericVector distance(n*n);
   IntegerVector prevnode(n*n, NA_INTEGER);
   for (int i = 0; i < n; i++) {
-    List tmp = dijkstra(adjmat, i+1);
+    List tmp = dijkstra(adj, i+1);
     NumericVector tmpdist = tmp["distance"];
     IntegerVector tmpprev = tmp["prevnode"];
     tmpdist = exp(-tmpdist);
