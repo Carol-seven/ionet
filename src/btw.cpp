@@ -101,7 +101,7 @@ List btw(NumericMatrix adjmat,
       } else if (type == "distribution" || type == "push") {
         int target = path[m-1] - 1;
         for (int k = 1; k < m-1; k++) {
-          int temp = path[k];
+          int temp = path[k] - 1;
           btwscore[temp] = btwscore[temp] +
             pow(strength[j], alpha) * pow(prior[target], 1-alpha);
         }
