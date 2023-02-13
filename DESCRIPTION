@@ -2,17 +2,23 @@ Package: ionet
 Type: Package
 Title: Network Analysis for Input-Output Tables
 Version: 0.2.0
-Author: Shiying Xiao
-Maintainer: Shiying Xiao <shiying.xiao@outlook.com>
+Authors@R: c(
+    person("Shiying", "Xiao", email = "shiying.xiao@outlook.com",
+           role = c("aut", "cre")),
+    person("Jun", "Yan", email = "jun.yan@uconn.edu",
+           role = "aut"),
+    person("Panpan", "Zhang", email = "panpan.zhang@vumc.org",
+           role = "aut"))
 Description: Network functionalities specialized for data generated from input-output tables.
+Depends: R (>= 2.10)
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.8.3)
 LinkingTo: Rcpp
-RoxygenNote: 7.2.0
+URL: https://github.com/Carol-seven/ionet
+BugReports: https://github.com/Carol-seven/ionet/issues
+RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Depends: 
-    R (>= 2.10)
