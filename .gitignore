@@ -1,10 +1,11 @@
-.Rproj.user
-.Rhistory
 .RData
+.Rhistory
+*.Rmd
+*.Rproj
+.Rproj.user
 .Ruserdata
 src/*.o
 src/*.so
 src/*.dll
-.Rdata
 .httr-oauth
 .DS_Store
