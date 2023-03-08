@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ionet
+# ionet <img src="man/figures/logo.png" align="right" height="170"/>
 
 <!-- badges: start -->
 
@@ -14,7 +14,7 @@ for the data generated from input-output tables.
 
 ## Installation
 
-You can install the development version of `ionet` from
+You can install the development version of **ionet** from
 [GitHub](https://github.com/) with:
 
 ``` r
