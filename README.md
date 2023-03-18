@@ -22,7 +22,31 @@ You can install the development version of **ionet** from
 devtools::install_github("Carol-seven/ionet")
 ```
 
-## Recommended citation
+## Function
+
+`btw()`: betweenness centrality measure that incorporates available
+node-specific auxiliary information based on strongest path.
+
+## Data \| Input-Output Tables
+
+| Database                                   | Economies |  Sectors  | Years |
+|:-------------------------------------------|:---------:|:---------:|:-----:|
+| the National Bureau of Statistics of China |   China   |   2002    |  122  |
+|                                            |           |   2005    |  42   |
+|                                            |           |   2007    |  135  |
+|                                            |           |   2010    |  41   |
+|                                            |           |   2012    |  139  |
+|                                            |           |   2015    |  42   |
+|                                            |           |   2017    |  149  |
+|                                            |           |   2017    |  42   |
+|                                            |           |   2018    |  153  |
+|                                            |           |   2018    |  42   |
+|                                            |           |   2020    |  153  |
+|                                            |           |   2020    |  42   |
+| OECD Input-Output Tables 2021 edition      |   China   | 1995–2018 |  45   |
+| OECD Input-Output Tables 2021 edition      |   Japan   | 1995–2018 |  45   |
+
+## Recommended Citation
 
 Xiao, S., Yan, J. and Zhang, P. (2022). Incorporating auxiliary
 information in betweenness measure for input-output networks. *Physica
