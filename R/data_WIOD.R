@@ -15,20 +15,30 @@
 #' @return NULL
 #' @export
 
-data_WIOD <- function(version = "2016 Release",year) {
-
+data_WIOD <- function(version = c("2013 Release", "2016 Release"),
+                      year)
+{
   url <- "https://github.com/Carol-seven/ionet_ext/raw/master/"
 
+  if (!version %in% c("2013 Release", "2016 Release")) {
+    stop("Invalid version specified. Must be '2013 Release' or '2016 Release'!")
+  }
   if (version == "2013 Release") {
-    data_name <- paste0("WIOD2013_WIOT_", year, ".rda")
-    url <- paste0(url, "WIOD%202013%20Release/", data_name)
-    data_size <- 15e+6
+    if (year %in% c(1995L:2011L)) {
+      data_name <- paste0("WIOD2013_WIOT_", year, ".rda")
+      url <- paste0(url, "WIOD%202013%20Release/", data_name)
+      data_size <- 15e+6
+    } else {
+      stop("Invalid year specified. Must be between 1995 and 2011.")
+    }
   } else if (version == "2016 Release") {
-    data_name <- paste0("WIOD2016_WIOT_", year, ".rda")
-    url <- paste0(url, "WIOD%202016%20Release/", data_name)
-    data_size <- 43e+6
-  } else {
-    stop("Invalid release specified. Must be '2013 Release' or '2016 Release'!")
+    if (year %in% c(2000L:2014L)) {
+      data_name <- paste0("WIOD2016_WIOT_", year, ".rda")
+      url <- paste0(url, "WIOD%202016%20Release/", data_name)
+      data_size <- 43e+6
+    } else {
+      stop("Invalid year specified. Must be between 2000 and 2014.")
+    }
   }
 
   data_path <- file.path(system.file("data", package = "ionet"), data_name)
@@ -38,8 +48,10 @@ data_WIOD <- function(version = "2016 Release",year) {
     message("Downloading data...")
   }
 
-  load(data_path)
-  message("The data has already been downloaded and loaded!")
+  if (file.exists(data_path) & file.size(data_name) > data_size) {
+    load(data_path)
+    message("The data has already been downloaded and loaded!")
+  }
 
   invisible(NULL)
 }

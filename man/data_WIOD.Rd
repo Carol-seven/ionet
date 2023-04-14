@@ -7,7 +7,7 @@
 \href{https://www.rug.nl/ggdc/valuechain/wiod/}{World Input-Output Database}
 }
 \usage{
-data_WIOD(version = "2016 Release", year)
+data_WIOD(version = c("2013 Release", "2016 Release"), year)
 }
 \arguments{
 \item{version}{The specific release of WIOD, either "2013 Release" or "2016 Release".}
