@@ -10,15 +10,16 @@
 data_WIOD(version = "2016 Release", year)
 }
 \arguments{
-\item{version}{is the specific release of WIOD, either "2013 Release" or "2016 Release".}
+\item{version}{The specific release of WIOD, either "2013 Release" or "2016 Release".}
 
-\item{year}{is the specific year of the data.}
+\item{year}{The specific year of the data.}
 }
 \description{
-Download the data from \href{https://github.com/Carol-seven/ionet_ext}{ionet_ext},
-an extension repository for storing data in the R package ionet,
-and store it in the package directory.
+Download the WIOD data from \href{https://github.com/Carol-seven/ionet_ext}{ionet_ext},
+(an extension repository for storing data in the R package ionet),
+store it in the package directory, and load it into the R workspace.
 If the data has already been downloaded, a message will be displayed.
+If the data is downloaded but incomplete, an error message will be displayed.
 }
 \note{
 The size of the data may exceed the capacity of the internet connection,
