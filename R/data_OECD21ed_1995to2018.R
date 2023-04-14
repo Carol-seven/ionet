@@ -9,6 +9,7 @@
 #' @source \href{https://www.oecd.org/sti/ind/input-outputtables.htm}{Input-Output Tables (IOTs) 2021 ed. - OECD}
 "OECD21ed_CHN_1995to2018"
 
+
 #' @name OECD21ed_JPN_1995to2018
 #' @docType data
 #' @title Input-output tables of the OECD 2021 edition for Japan, 1995--2018, 45 sectors
