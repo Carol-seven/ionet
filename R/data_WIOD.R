@@ -43,12 +43,12 @@ data_WIOD <- function(version = c("2013 Release", "2016 Release"),
 
   data_path <- file.path(system.file("data", package = "ionet"), data_name)
 
-  if (!file.exists(data_path) | file.size(data_name) < data_size) {
+  if (!file.exists(data_path) | file.size(data_path) < data_size) {
     download.file(url, destfile = data_path, mode = "wb", quiet = TRUE)
     message("Downloading data...")
   }
 
-  if (file.exists(data_path) & file.size(data_name) > data_size) {
+  if (file.exists(data_path) & file.size(data_path) > data_size) {
     load(data_path)
     message("The data has already been downloaded and loaded!")
   }
