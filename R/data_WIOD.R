@@ -49,7 +49,7 @@ data_WIOD <- function(version = c("2013 Release", "2016 Release"),
   }
 
   if (file.exists(data_path) & file.size(data_path) > data_size) {
-    load(data_path)
+    load(data_path, envir = globalenv())
     message("The data has already been downloaded and loaded!")
   }
 
