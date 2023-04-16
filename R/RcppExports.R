@@ -12,6 +12,9 @@
 #' @param alpha The tuning parameter controlling the weights for SP strength and
 #' prior information. The default setting is 1.
 #' @param type Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".
+#' @references Xiao, S., Yan, J. and Zhang, P. (2022).
+#' "Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks".
+#' \emph{Physica A: Statistical Mechanics and its Applications}, 607, 128200.
 #' @return Lists of betweeness score, associated SPs, SP distance and SP strength.
 #' @export
 btw <- function(adjmat, gross, prior, alpha = 1, type = "consumption") {
@@ -20,8 +23,14 @@ btw <- function(adjmat, gross, prior, alpha = 1, type = "consumption") {
 
 #' Dijkstra's algorithm
 #'
+#' Implement the Dijkstra's algorithm to find the shortest paths
+#' from the source node to all nodes in the given network.
+#'
 #' @param adjmat The adjacency matrix of an directed and weighted network.
 #' @param src The given source node to find the shortest distance.
+#' @references Dijkstra, E. W. (1959).
+#' "A Note on Two Problems in Connexion with Graphs".
+#' \emph{Numerische Mathematik}, 1, 269--271.
 #' @return Lists of distance, previous node.
 #' @export
 dijkstra <- function(adjmat, src) {

@@ -25,3 +25,8 @@ Lists of betweeness score, associated SPs, SP distance and SP strength.
 \description{
 Compute the betweenness centrality with prior information based on strongest path (SP).
 }
+\references{
+Xiao, S., Yan, J. and Zhang, P. (2022).
+"Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks".
+\emph{Physica A: Statistical Mechanics and its Applications}, 607, 128200.
+}

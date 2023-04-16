@@ -51,10 +51,10 @@ Values are denoted in millions of US dollars (USD).
 \itemize{
 \item Dietzenbacher, E., Los, B., Stehrer R., Timmer, M. P. and de Vries, G. J. (2013).
 "The Construction of World Input-Output Tables in the WIOD Project".
-\emph{Economic Systems Research}, 25(1): 71--98.
+\emph{Economic Systems Research}, 25(1), 71--98.
 \item Timmer, M. P., Dietzenbacher, E., Los, B., Stehrer, R. and de Vries, G. J. (2015).
 "An Illustrated User Guide to the World Input-Output Database: the Case of Global Automotive Production".
-\emph{Review of International Economics}, 23(3): 575--605.
+\emph{Review of International Economics}, 23(3), 575--605.
 \item Timmer, M. P., Los, B., Stehrer, R. and de Vries, G. J. (2016).
 "An Anatomy of the Global Trade Slowdown based on the WIOD 2016 Release".
 \emph{GGDC Research Memorandum 162, University of Groningen}.

@@ -26,8 +26,14 @@ int minDist(NumericVector dist, LogicalVector doneSet) {
 
 //' Dijkstra's algorithm
 //'
+//' Implement the Dijkstra's algorithm to find the shortest paths
+//' from the source node to all nodes in the given network.
+//'
 //' @param adjmat The adjacency matrix of an directed and weighted network.
 //' @param src The given source node to find the shortest distance.
+//' @references Dijkstra, E. W. (1959).
+//' "A Note on Two Problems in Connexion with Graphs".
+//' \emph{Numerische Mathematik}, 1, 269--271.
 //' @return Lists of distance, previous node.
 //' @export
 // [[Rcpp::export]]

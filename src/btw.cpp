@@ -14,6 +14,9 @@ using namespace Rcpp;
 //' @param alpha The tuning parameter controlling the weights for SP strength and
 //' prior information. The default setting is 1.
 //' @param type Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".
+//' @references Xiao, S., Yan, J. and Zhang, P. (2022).
+//' "Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks".
+//' \emph{Physica A: Statistical Mechanics and its Applications}, 607, 128200.
 //' @return Lists of betweeness score, associated SPs, SP distance and SP strength.
 //' @export
 // [[Rcpp::export]]
