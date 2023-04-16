@@ -76,7 +76,7 @@ data_WIOD <- function(version = c("2013 release", "2016 release", "long run"),
     }
   } else if (version == "long run") {
     if (year %in% c(1965L:2000L)) {
-      data_name <- paste0("WIODlr_WIOT", year, ".rda")
+      data_name <- paste0("WIODlr_WIOT_", year, ".rda")
       url <- paste0(url, "WIOD%20long-run/", data_name)
       data_size <- 28e+5
     } else {
