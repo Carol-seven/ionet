@@ -25,3 +25,8 @@ If the data is downloaded but incomplete, an error message will be displayed.
 The size of the data may exceed the capacity of the internet connection,
 potentially limiting the download speed.
 }
+\references{
+Timmer, M. P., Dietzenbacher, E., Los, B., Stehrer, R. and de Vries, G. J. (2015).
+"An Illustrated User Guide to the World Input–Output Database: the Case of Global Automotive Production",
+\emph{Review of International Economics}. 23(3): 575--605.
+}

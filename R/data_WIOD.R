@@ -10,6 +10,9 @@
 #' @param version The specific release of WIOD, either "2013 Release" or "2016 Release".
 #' @param year The specific year of the data.
 #' @source \href{https://www.rug.nl/ggdc/valuechain/wiod/}{World Input-Output Database}
+#' @references Timmer, M. P., Dietzenbacher, E., Los, B., Stehrer, R. and de Vries, G. J. (2015).
+#' "An Illustrated User Guide to the World Input–Output Database: the Case of Global Automotive Production",
+#' \emph{Review of International Economics}. 23(3): 575--605.
 #' @note The size of the data may exceed the capacity of the internet connection,
 #' potentially limiting the download speed.
 #' @return NULL
