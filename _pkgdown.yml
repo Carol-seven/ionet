@@ -1,0 +1,22 @@
+home:
+  title: ionet
+  description: Network Analysis for Input-Output Tables
+
+url: https://github.com/Carol-seven/ionet
+
+template:
+  bootstrap: 5
+  opengraph:
+    image:
+      src: https://github.com/Carol-seven/ionet/blob/master/man/figures/logo.png
+
+authors:
+  Shiying Xiao:
+    href: http://shiying-xiao.com
+  Jun Yan:
+    href: http://merlot.stat.uconn.edu/~jyan
+  Panpan Zhang:
+    href: https://panpan-zhang.com
+
+development:
+  mode: auto

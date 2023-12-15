@@ -4,11 +4,12 @@ Title: Network Analysis for Input-Output Tables
 Version: 0.2.2
 Authors@R: c(
     person("Shiying", "Xiao", email = "shiying.xiao@outlook.com",
-           role = c("aut", "cre")),
+           role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8846-3258")),
     person("Jun", "Yan", email = "jun.yan@uconn.edu",
-           role = "aut"),
+           role = "aut", comment = c(ORCID = "0000-0003-4401-7296")),
     person("Panpan", "Zhang", email = "panpan.zhang@vumc.org",
-           role = "aut"))
+           role = "aut", comment = c(ORCID = "0000-0002-8211-5930")))
+Maintainer: Shiying Xiao <shiying.xiao@outlook.com>
 Description: Network functionalities specialized for data generated from input-output tables.
 Depends: R (>= 2.10)
 License: GPL (>= 3)
