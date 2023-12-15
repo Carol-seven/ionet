@@ -1,9 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^LICENSE\.md$
 ^\.github$
 ^README\.Rmd$
 ^Makefile$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^LICENSE$
