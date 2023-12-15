@@ -1,7 +1,6 @@
 .RData
 .Rhistory
 *.Rmd
-*.Rproj
 .Rproj.user
 .Ruserdata
 src/*.o
