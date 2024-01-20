@@ -8,7 +8,7 @@ template:
   bootstrap: 5
   opengraph:
     image:
-      src: https://github.com/Carol-seven/ionet/blob/master/man/figures/logo.png
+      src: https://github.com/Carol-seven/ionet/blob/master/man/figure/logo.png
 
 authors:
   Shiying Xiao:

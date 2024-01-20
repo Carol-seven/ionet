@@ -1,0 +1,19 @@
+/* pkgdown/extra.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 85%;
+}
+
+@media (min-width: 1400px) {
+  main + .col-md-3 {
+    margin-left: 0;
+    padding-left: 5rem;
+  }
+}

@@ -15,8 +15,8 @@ Number of employed persons (in the unit of 10 thousands) in China 1990-2018, by 
 }
 \references{
 Wang, Y., Jia, X. and Wang, C. (2021).
-``Research on Sectoral Employment Accounting of China.''
-\emph{Statistical Research}, 38(12), 3-18.
+Research on Sectoral Employment Accounting of China.
+\emph{Statistical Research}, 38(12), 3--18.
 \href{https://tjyj.stats.gov.cn/EN/Y2021/V38/I12/3}{URL}
 }
 \keyword{datasets}

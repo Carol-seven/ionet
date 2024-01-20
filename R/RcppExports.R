@@ -3,35 +3,56 @@
 
 #' Betweenness centrality
 #'
-#' Compute the betweenness centrality with prior information based on strongest path (SP).
+#' @description
+#' Compute the betweenness centrality with auxiliary information based on strongest path
+#' (SP).
 #'
-#' @param adjmat The matrix of intermediate transactions in the input-output table,
-#' a n-by-n matrix.
-#' @param gross The gross input/output, a n-by-1 vector.
-#' @param prior The node-specific prior information, a n-by-1 vector.
-#' @param alpha The tuning parameter controlling the weights for SP strength and
-#' prior information. The default setting is 1.
-#' @param type Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".
-#' @references Xiao, S., Yan, J. and Zhang, P. (2022).
-#' "Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks".
+#' @param adjmat An n-by-n numerical matrix representing the matrix of intermediate
+#' transactions in the input-output table.
+#'
+#' @param gross An n-dimensional numerical vector representing the gross input/output.
+#'
+#' @param aux An n-dimensional numerical vector representing the node-specific auxiliary
+#' information.
+#'
+#' @param alpha A scalar (default = 1) between 0 and 1, representing the tuning parameter
+#' that controls the weights for SP strength and auxiliary information.
+#'
+#' @param type A character string specifying the type of SP to calculate. Available
+#' options: \itemize{
+#' \item \code{type = "consumption"} / \code{type = "pull"} (default)
+#' \item \code{type = "distribution"} / \code{type = "push"}
+#' }
+#'
+#' @references
+#' Xiao, S., Yan, J. and Zhang, P. (2022).
+#' Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks.
 #' \emph{Physica A: Statistical Mechanics and its Applications}, 607, 128200.
-#' @return Lists of betweeness score, associated SPs, SP distance and SP strength.
+#'
+#' @return A list of betweeness score, associated SPs, SP distance and SP strength.
+#'
 #' @export
-btw <- function(adjmat, gross, prior, alpha = 1, type = "consumption") {
-    .Call(`_ionet_btw`, adjmat, gross, prior, alpha, type)
+btw <- function(adjmat, gross, aux, alpha = 1, type = "consumption") {
+    .Call(`_ionet_btw`, adjmat, gross, aux, alpha, type)
 }
 
 #' Dijkstra's algorithm
 #'
-#' Implement the Dijkstra's algorithm to find the shortest paths
-#' from the source node to all nodes in the given network.
+#' @description
+#' Implement the Dijkstra's algorithm to find the shortest paths from the source node to
+#' all nodes in the given network.
 #'
-#' @param adjmat The adjacency matrix of an directed and weighted network.
-#' @param src The given source node to find the shortest distance.
-#' @references Dijkstra, E. W. (1959).
-#' "A Note on Two Problems in Connexion with Graphs".
+#' @param adjmat The adjacency matrix of a directed, weighted network.
+#'
+#' @param src An integer specifying the given source node to find the shortest distance.
+#'
+#' @references
+#' Dijkstra, E. W. (1959).
+#' A Note on Two Problems in Connexion with Graphs.
 #' \emph{Numerische Mathematik}, 1, 269--271.
-#' @return Lists of distance, previous node.
+#'
+#' @return A list of distance and previous node.
+#'
 #' @export
 dijkstra <- function(adjmat, src) {
     .Call(`_ionet_dijkstra`, adjmat, src)

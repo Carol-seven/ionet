@@ -4,29 +4,35 @@
 \alias{btw}
 \title{Betweenness centrality}
 \usage{
-btw(adjmat, gross, prior, alpha = 1, type = "consumption")
+btw(adjmat, gross, aux, alpha = 1, type = "consumption")
 }
 \arguments{
-\item{adjmat}{The matrix of intermediate transactions in the input-output table,
-a n-by-n matrix.}
+\item{adjmat}{An n-by-n numerical matrix representing the matrix of intermediate
+transactions in the input-output table.}
 
-\item{gross}{The gross input/output, a n-by-1 vector.}
+\item{gross}{An n-dimensional numerical vector representing the gross input/output.}
 
-\item{prior}{The node-specific prior information, a n-by-1 vector.}
+\item{aux}{An n-dimensional numerical vector representing the node-specific auxiliary
+information.}
 
-\item{alpha}{The tuning parameter controlling the weights for SP strength and
-prior information. The default setting is 1.}
+\item{alpha}{A scalar (default = 1) between 0 and 1, representing the tuning parameter
+that controls the weights for SP strength and auxiliary information.}
 
-\item{type}{Which type of SP to calculate: "consumption"/"pull" (default) or "distribution"/"push".}
+\item{type}{A character string specifying the type of SP to calculate. Available
+options: \itemize{
+\item \code{type = "consumption"} / \code{type = "pull"} (default)
+\item \code{type = "distribution"} / \code{type = "push"}
+}}
 }
 \value{
-Lists of betweeness score, associated SPs, SP distance and SP strength.
+A list of betweeness score, associated SPs, SP distance and SP strength.
 }
 \description{
-Compute the betweenness centrality with prior information based on strongest path (SP).
+Compute the betweenness centrality with auxiliary information based on strongest path
+(SP).
 }
 \references{
 Xiao, S., Yan, J. and Zhang, P. (2022).
-"Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks".
+Incorporating Auxiliary Information in Betweenness Measure for Input-Output Networks.
 \emph{Physica A: Statistical Mechanics and its Applications}, 607, 128200.
 }

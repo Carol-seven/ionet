@@ -7,19 +7,19 @@
 dijkstra(adjmat, src)
 }
 \arguments{
-\item{adjmat}{The adjacency matrix of an directed and weighted network.}
+\item{adjmat}{The adjacency matrix of a directed, weighted network.}
 
-\item{src}{The given source node to find the shortest distance.}
+\item{src}{An integer specifying the given source node to find the shortest distance.}
 }
 \value{
-Lists of distance, previous node.
+A list of distance and previous node.
 }
 \description{
-Implement the Dijkstra's algorithm to find the shortest paths
-from the source node to all nodes in the given network.
+Implement the Dijkstra's algorithm to find the shortest paths from the source node to
+all nodes in the given network.
 }
 \references{
 Dijkstra, E. W. (1959).
-"A Note on Two Problems in Connexion with Graphs".
+A Note on Two Problems in Connexion with Graphs.
 \emph{Numerische Mathematik}, 1, 269--271.
 }

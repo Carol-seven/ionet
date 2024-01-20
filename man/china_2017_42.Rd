@@ -8,7 +8,7 @@
 A data frame with 91 rows and 53 columns.
 }
 \source{
-\href{https://data.stats.gov.cn/ifnormal.htm?u=/files/html/quickSearch/trcc/trcc01.html&h=740}{National Bureau of Statistics of China}
+\href{https://www.stats.gov.cn}{National Bureau of Statistics of China}
 }
 \usage{
 data(china_2017_42)

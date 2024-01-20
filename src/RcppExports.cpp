@@ -11,17 +11,17 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // btw
-List btw(NumericMatrix adjmat, NumericVector gross, NumericVector prior, double alpha, String type);
-RcppExport SEXP _ionet_btw(SEXP adjmatSEXP, SEXP grossSEXP, SEXP priorSEXP, SEXP alphaSEXP, SEXP typeSEXP) {
+List btw(NumericMatrix adjmat, NumericVector gross, NumericVector aux, double alpha, String type);
+RcppExport SEXP _ionet_btw(SEXP adjmatSEXP, SEXP grossSEXP, SEXP auxSEXP, SEXP alphaSEXP, SEXP typeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericMatrix >::type adjmat(adjmatSEXP);
     Rcpp::traits::input_parameter< NumericVector >::type gross(grossSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type prior(priorSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type aux(auxSEXP);
     Rcpp::traits::input_parameter< double >::type alpha(alphaSEXP);
     Rcpp::traits::input_parameter< String >::type type(typeSEXP);
-    rcpp_result_gen = Rcpp::wrap(btw(adjmat, gross, prior, alpha, type));
+    rcpp_result_gen = Rcpp::wrap(btw(adjmat, gross, aux, alpha, type));
     return rcpp_result_gen;
 END_RCPP
 }

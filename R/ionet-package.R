@@ -2,10 +2,10 @@
 #'
 #' Network Analysis for Input-Output Tables
 #'
-#' @docType package
-#' @author Shiying Xiao <shiying.xiao@outlook.com>
+#' @docType _PACKAGE
 #' @importFrom Rcpp evalCpp
 #' @useDynLib ionet, .registration = TRUE
 #' @name ionet
+#' @noRd
 
 NULL
