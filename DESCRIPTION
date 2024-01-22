@@ -17,7 +17,7 @@ Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.8.3)
 LinkingTo: Rcpp
-URL: https://github.com/Carol-seven/ionet
+URL: https://shiying-xiao.com/ionet/, https://github.com/Carol-seven/ionet
 BugReports: https://github.com/Carol-seven/ionet/issues
 RoxygenNote: 7.3.0
 Suggests: 
