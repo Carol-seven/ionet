@@ -1,6 +1,7 @@
 # ionet <img src="man/figure/logo.png" align="right" alt="" width="150">
 
 <!-- badges: start -->
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/ionet)](https://CRAN.R-project.org/package=ionet)
 [![R-CMD-check](https://github.com/Carol-seven/ionet/workflows/R-CMD-check/badge.svg)](https://github.com/Carol-seven/ionet/actions)
 [![DOI](https://img.shields.io/badge/DOI-10.1016/j.physa.2022.128200-blue.svg)](https://doi.org/10.1016/j.physa.2022.128200)
 <!-- badges: end -->
